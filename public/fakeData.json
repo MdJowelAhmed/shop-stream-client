@@ -1,0 +1,403 @@
+const fakeData=[
+    {
+      "productName": "Ultra HD Smart TV",
+      "productImage": "https://res.cloudinary.com/sharp-consumer-eu/image/fetch/w_3000,f_auto/https://s3.infra.brandquad.io/accounts-media/SHRP/DAM/origin/b41a7fde-dcc1-11ec-9f1b-2e0c91dc8f24.jpg",
+      "brandName": "Samsung",
+      "description": "55-inch Ultra HD 4K Smart TV with built-in Alexa and HDR technology.",
+      "price": 499.99,
+      "category": "Electronics",
+      "ratings": 4.7,
+      "creationDateTime": "2024-08-16T10:15:00"
+    },
+    {
+      "productName": "Running Shoes",
+      "productImage": "https://hips.hearstapps.com/hmg-prod/images/bestshoes-65f2d1f26eed0.jpg?crop=1xw:0.9966777408637874xh;center,top&resize=640:*",
+      "brandName": "Nike",
+      "description": "Lightweight running shoes with breathable mesh and cushioned soles.",
+      "price": 79.99,
+      "category": "Footwear",
+      "ratings": 4.5,
+      "creationDateTime": "2024-08-16T10:30:00"
+    },
+    {
+      "productName": "Bluetooth Headphones",
+      "productImage": "https://images-cdn.ubuy.co.in/636e5231bbadec17c37f2dd4-wireless-ear-buds-bluetooth-headphones.jpg",
+      "brandName": "Bose",
+      "description": "Wireless noise-canceling headphones with 20-hour battery life.",
+      "price": 199.99,
+      "category": "Electronics",
+      "ratings": 4.8,
+      "creationDateTime": "2024-08-16T11:00:00"
+    },
+    {
+      "productName": "Espresso Machine",
+      "productImage": "https://m.media-amazon.com/images/I/71FxvvpKF4L._AC_SL1500_.jpg",
+      "brandName": "DeLonghi",
+      "description": "Compact espresso machine with milk frother and adjustable steam nozzle.",
+      "price": 129.99,
+      "category": "Kitchen",
+      "ratings": 4.6,
+      "creationDateTime": "2024-08-16T11:20:00"
+    },
+    {
+      "productName": "DSLR Camera",
+      "productImage": "https://i5.walmartimages.com/seo/Canon-EOS-4000D-DSLR-Camera-EF-S-18-55-mm-f-3-5-5-6-III-Lens-Intl-Model_f19eafa7-34df-43a7-b8c8-d2d278591a01.a2330695baba8634b2ffb3aedb0af159.jpeg",
+      "brandName": "Canon",
+      "description": "24.1 MP DSLR camera with dual pixel autofocus and 4K video recording.",
+      "price": 599.99,
+      "category": "Electronics",
+      "ratings": 4.9,
+      "creationDateTime": "2024-08-16T11:45:00"
+    },
+    {
+      "productName": "Smartwatch",
+      "productImage": "https://m.media-amazon.com/images/I/618k+Ulje3L._AC_SL1424_.jpg",
+      "brandName": "Apple",
+      "description": "Series 6 smartwatch with health monitoring and GPS tracking.",
+      "price": 399.99,
+      "category": "Wearable",
+      "ratings": 4.8,
+      "creationDateTime": "2024-08-16T12:00:00"
+    },
+    {
+      "productName": "Gaming Laptop",
+      "productImage": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQG6MzSZebZVWb0q6ipy5mQYgeQqmRlyZ8u9A&s",
+      "brandName": "Asus",
+      "description": "High-performance gaming laptop with NVIDIA RTX graphics.",
+      "price": 1299.99,
+      "category": "Computers",
+      "ratings": 4.7,
+      "creationDateTime": "2024-08-16T12:30:00"
+    },
+    {
+      "productName": "Wireless Mouse",
+      "productImage": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQOkCVSrUzLhhnEVgFxu1EyxNg-t84-1yLspA&s",
+      "brandName": "Logitech",
+      "description": "Ergonomic wireless mouse with long battery life.",
+      "price": 29.99,
+      "category": "Accessories",
+      "ratings": 4.6,
+      "creationDateTime": "2024-08-16T12:45:00"
+    },
+    {
+      "productName": "Smart Speaker",
+      "productImage": "https://media.cnn.com/api/v1/images/stellar/prod/apple-homepod-pc.jpg?c=16x9&q=h_720,w_1280,c_fill",
+      "brandName": "Amazon",
+      "description": "Smart speaker with Alexa and high-quality sound.",
+      "price": 99.99,
+      "category": "Electronics",
+      "ratings": 4.7,
+      "creationDateTime": "2024-08-16T13:00:00"
+    },
+    {
+      "productName": "Electric Kettle",
+      "productImage": "https://m.media-amazon.com/images/I/615mdbIlDpL._AC_SL1500_.jpg",
+      "brandName": "Philips",
+      "description": "Stainless steel electric kettle with fast boiling feature.",
+      "price": 49.99,
+      "category": "Kitchen",
+      "ratings": 4.5,
+      "creationDateTime": "2024-08-16T13:15:00"
+    },
+    {
+      "productName": "Yoga Mat",
+      "productImage": "https://m.media-amazon.com/images/I/81a9mSKpkvL._AC_UF894,1000_QL80_.jpg",
+      "brandName": "Manduka",
+      "description": "High-density yoga mat with non-slip surface.",
+      "price": 79.99,
+      "category": "Fitness",
+      "ratings": 4.8,
+      "creationDateTime": "2024-08-16T13:30:00"
+    },
+    {
+      "productName": "Leather Wallet",
+      "productImage": "https://fabrilife.com/products/650a78abb9bbf-square.jpeg?v=2",
+      "brandName": "Fossil",
+      "description": "Premium leather wallet with multiple card slots.",
+      "price": 59.99,
+      "category": "Accessories",
+      "ratings": 4.7,
+      "creationDateTime": "2024-08-16T13:45:00"
+    },
+    {
+      "productName": "Electric Toothbrush",
+      "productImage": "https://images.ctfassets.net/cd8k8w3hw1x5/6qP9Aos4an6Rb3PwmQYFRb/eb2a7918132d3900dede0971a9114d32/electric-toothbrushes.jpg?w=3840&fm=webp&q=75",
+      "brandName": "Oral-B",
+      "description": "Electric toothbrush with multiple brushing modes and timer.",
+      "price": 89.99,
+      "category": "Personal Care",
+      "ratings": 4.6,
+      "creationDateTime": "2024-08-16T14:00:00"
+    },
+    {
+      "productName": "Portable Charger",
+      "productImage": "https://www.travelandleisure.com/thmb/eIzZNIMJ76dCqn8p2R_YH2JdRas=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/Best-Portable-Chargers-of-2024-tout-bd0829ba3e8b404db7b89ea04d10ed9a.jpg",
+      "brandName": "Anker",
+      "description": "High-capacity portable charger with fast charging technology.",
+      "price": 49.99,
+      "category": "Accessories",
+      "ratings": 4.8,
+      "creationDateTime": "2024-08-16T14:15:00"
+    },
+    {
+      "productName": "Bluetooth Speaker",
+      "productImage": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ5oJJ9IqutCFGbrF3vmqY5KyxnEz6QsehSqQ&s",
+      "brandName": "JBL",
+      "description": "Waterproof Bluetooth speaker with 20-hour playtime.",
+      "price": 99.99,
+      "category": "Electronics",
+      "ratings": 4.7,
+      "creationDateTime": "2024-08-16T14:30:00"
+    },
+    {
+      "productName": "Wireless Earbuds",
+      "productImage": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQBqjMCAlySxg4VF7xi-hBx4ugA4oQSufVNnQ&s",
+      "brandName": "Sony",
+      "description": "Noise-canceling wireless earbuds with long battery life.",
+      "price": 199.99,
+      "category": "Electronics",
+      "ratings": 4.8,
+      "creationDateTime": "2024-08-16T14:45:00"
+    },
+    {
+      "productName": "4K Action Camera",
+      "productImage": "https://www.shopz.com.bd/wp-content/uploads/2022/06/AUSEK-Wifi-4K-60fps-Ultra-HD-Waterproof-Sports-Action-Camera-With-Extranal-microphone-1.jpg",
+      "brandName": "GoPro",
+      "description": "Rugged 4K action camera with waterproof design.",
+      "price": 299.99,
+      "category": "Electronics",
+      "ratings": 4.7,
+      "creationDateTime": "2024-08-16T15:00:00"
+    },
+    {
+      "productName": "Instant Pot",
+      "productImage": "https://www.cnet.com/a/img/resize/d9d5051f11b99bd06eb6d42f882eafb6ad598b03/hub/2018/05/13/a21bc2a3-e9fa-433f-9582-4d15e04144fd/instant-pot-sf-smart-home-5-8-18-7884.jpg?auto=webp&fit=crop&height=900&width=1200",
+      "brandName": "Instant Pot",
+      "description": "7-in-1 multi-use programmable pressure cooker.",
+      "price": 99.99,
+      "category": "Kitchen",
+      "ratings": 4.8,
+      "creationDateTime": "2024-08-16T15:15:00"
+    },
+    {
+      "productName": "Gaming Console",
+      "productImage": "https://tfe-bd.sgp1.digitaloceanspaces.com/posts/34961/gamingconsoles-2048px-00730-3x2-1.jpg",
+      "brandName": "Sony",
+      "description": "Next-gen gaming console with ultra-fast loading times.",
+      "price": 499.99,
+      "category": "Electronics",
+      "ratings": 4.9,
+      "creationDateTime": "2024-08-16T15:30:00"
+    },
+    {
+      "productName": "Electric Bike",
+      "productImage": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSZEC-x8HSsF31vniNocVfkxhkURxakVru00g&s",
+      "brandName": "Rad Power Bikes",
+      "description": "Electric bike with 750W motor and long-range battery.",
+      "price": 1499.99,
+      "category": "Outdoor",
+      "ratings": 4.8,
+      "creationDateTime": "2024-08-16T15:45:00"
+    },
+    {
+      "productName": "Smart Thermostat",
+      "productImage": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTT3qwfyYLxEhGQqe0PU6VgaUPN9cig9PmKUA&s",
+      "brandName": "Nest",
+      "description": "Smart thermostat with energy-saving features.",
+      "price": 249.99,
+      "category": "Home Improvement",
+      "ratings": 4.7,
+      "creationDateTime": "2024-08-16T16:00:00"
+    },
+    {
+      "productName": "Standing Desk",
+      "productImage": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQYeuindqFT64x6JV9pPG4isy19P2yyasj_CQ&s",
+      "brandName": "FlexiSpot",
+      "description": "Height-adjustable standing desk with ergonomic design.",
+      "price": 299.99,
+      "category": "Furniture",
+      "ratings": 4.6,
+      "creationDateTime": "2024-08-16T16:15:00"
+    },
+    {
+      "productName": "Cordless Vacuum",
+      "productImage": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQaTze3dznXNLGesH70TXSiEVSROOWUEVVgIA&s",
+      "brandName": "Dyson",
+      "description": "Powerful cordless vacuum with long battery life.",
+      "price": 399.99,
+      "category": "Home Appliances",
+      "ratings": 4.8,
+      "creationDateTime": "2024-08-16T16:30:00"
+    },
+    {
+      "productName": "Electric Grill",
+      "productImage": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRFDYQ57MOHTRbnXqfaNknnphFRS6WTkj62gQ&s",
+      "brandName": "George Foreman",
+      "description": "Indoor/outdoor electric grill with non-stick coating.",
+      "price": 79.99,
+      "category": "Kitchen",
+      "ratings": 4.6,
+      "creationDateTime": "2024-08-16T16:45:00"
+    },
+    {
+      "productName": "Noise-Canceling Headphones",
+      "productImage": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSbBgeEwdV5B581gCBpj2CKCZKgIGGWSN8kXw&s",
+      "brandName": "Sony",
+      "description": "High-quality noise-canceling headphones with wireless capabilities.",
+      "price": 349.99,
+      "category": "Electronics",
+      "ratings": 4.9,
+      "creationDateTime": "2024-08-16T17:00:00"
+    },
+    {
+      "productName": "Smart Light Bulbs",
+      "productImage": "https://i5.walmartimages.com/seo/Smart-Light-Bulb-Wifi-Bulb-Color-Changing-LED-Bluetooth-Bulbs-APP-Remote-Controlled-Home-Lamp-Compatible-Alexa-Google-Assistant_1cba82fc-0e92-4d71-9b8a-38b182274c72_1.52bd96b1839a4c777e202ad19fe2492e.jpeg",
+      "brandName": "Philips Hue",
+      "description": "Smart LED light bulbs with customizable color options.",
+      "price": 49.99,
+      "category": "Home Improvement",
+      "ratings": 4.7,
+      "creationDateTime": "2024-08-16T17:15:00"
+    },
+    {
+      "productName": "Fitness Tracker",
+      "productImage": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR3VhDaj9ZQb-Jl2HfNXsXRLREyn82t_2T_Lg&s",
+      "brandName": "Fitbit",
+      "description": "Fitness tracker with heart rate monitoring and sleep tracking.",
+      "price": 149.99,
+      "category": "Wearable",
+      "ratings": 4.7,
+      "creationDateTime": "2024-08-16T17:30:00"
+    },
+    {
+      "productName": "Robot Vacuum",
+      "productImage": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSNfx_UjKAyngMpEYtgN1TBOkdTxYKaCfDEOg&s",
+      "brandName": "iRobot",
+      "description": "Smart robot vacuum with Wi-Fi connectivity.",
+      "price": 299.99,
+      "category": "Home Appliances",
+      "ratings": 4.8,
+      "creationDateTime": "2024-08-16T17:45:00"
+    },
+    {
+      "productName": "Wireless Charging Pad",
+      "productImage": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR29L_eTYh7xsDjOcCKXFboHM9-wH7na_eHMg&s",
+      "brandName": "Samsung",
+      "description": "Fast wireless charging pad compatible with multiple devices.",
+      "price": 39.99,
+      "category": "Accessories",
+      "ratings": 4.6,
+      "creationDateTime": "2024-08-16T18:00:00"
+    },
+    {
+      "productName": "Smart Doorbell",
+      "productImage": "https://cdn.thewirecutter.com/wp-content/media/2023/09/smart-doorbell-camera-2048px-0048.jpg",
+      "brandName": "Ring",
+      "description": "Smart doorbell with video recording and motion detection.",
+      "price": 149.99,
+      "category": "Home Improvement",
+      "ratings": 4.7,
+      "creationDateTime": "2024-08-16T18:15:00"
+    },
+    {
+      "productName": "Digital Photo Frame",
+      "productImage": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTNPgXfkU4PkrVhMhNyv82kRoaDPitCC22KRw&s",
+      "brandName": "Nixplay",
+      "description": "Wi-Fi enabled digital photo frame with cloud storage.",
+      "price": 179.99,
+      "category": "Electronics",
+      "ratings": 4.6,
+      "creationDateTime": "2024-08-16T18:30:00"
+    },
+    {
+      "productName": "Air Purifier",
+      "productImage": "https://images-cdn.ubuy.co.in/633ad257098ec330ac1a41a4-pur.jpg",
+      "brandName": "Honeywell",
+      "description": "HEPA air purifier with multiple fan speeds.",
+      "price": 129.99,
+      "category": "Home Appliances",
+      "ratings": 4.7,
+      "creationDateTime": "2024-08-16T18:45:00"
+    },
+    {
+      "productName": "Instant Camera",
+      "productImage": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRoef_4TZdCIS95koGFNV9ssh0aKjQKbCUWZA&s",
+      "brandName": "Fujifilm",
+      "description": "Instant camera with built-in flash and automatic exposure.",
+      "price": 69.99,
+      "category": "Electronics",
+      "ratings": 4.6,
+      "creationDateTime": "2024-08-16T19:00:00"
+    },
+    {
+      "productName": "Wireless Keyboard",
+      "productImage": "https://m.media-amazon.com/images/I/61KPY8aCBsL._AC_SL1500_.jpg",
+      "brandName": "Logitech",
+      "description": "Compact wireless keyboard with long battery life.",
+      "price": 49.99,
+      "category": "Accessories",
+      "ratings": 4.7,
+      "creationDateTime": "2024-08-16T19:15:00"
+    },
+    {
+      "productName": "Electric Scooter",
+      "productImage": "https://i5.walmartimages.com/seo/Hyper-36V-Skute-Commute-12-Seated-Electric-Scooter-with-Basket-250W-Motor-13-Years-Max-Speed-15mph_3ec657a8-ae7a-4064-ac33-a2d7f960d809.de063fbeb6c6ee0aa46e700cbea69066.jpeg",
+      "brandName": "Segway",
+      "description": "Electric scooter with long battery range and foldable design.",
+      "price": 599.99,
+      "category": "Outdoor",
+      "ratings": 4.8,
+      "creationDateTime": "2024-08-16T19:30:00"
+    },
+    {
+      "productName": "Laptop Backpack",
+      "productImage": "https://m.media-amazon.com/images/I/51qv8aK9usL._AC_UL1321_.jpg",
+      "brandName": "SwissGear",
+      "description": "Durable laptop backpack with multiple compartments and USB charging port.",
+      "price": 89.99,
+      "category": "Accessories",
+      "ratings": 4.7,
+      "creationDateTime": "2024-08-16T19:45:00"
+    },
+    {
+      "productName": "Streaming Device",
+      "productImage": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQME41ys-MTfC0RE-wNOKAlFO4rFbKRXeB7sg&s",
+      "brandName": "Roku",
+      "description": "4K streaming device with voice remote and TV controls.",
+      "price": 49.99,
+      "category": "Electronics",
+      "ratings": 4.6,
+      "creationDateTime": "2024-08-16T20:00:00"
+    },
+    {
+      "productName": "Gaming Mouse",
+      "productImage": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQnrflfYOHhiy50_Rfjx4oAXHzU3ql8-uyVRa55pe-NeqEjV-hPoNjZJcY1kdALWUUz67w&usqp=CAU",
+      "brandName": "Razer",
+      "description": "High-precision gaming mouse with customizable buttons and RGB lighting.",
+      "price": 79.99,
+      "category": "Accessories",
+      "ratings": 4.8,
+      "creationDateTime": "2024-08-16T20:15:00"
+    },
+    {
+      "productName": "Smart Ceiling Fan",
+      "productImage": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR83yUwSjUCBScDSHTUDac3hSgeFeMDzcRq0w&s",
+      "brandName": "Hunter",
+      "description": "Smart ceiling fan with remote control and adjustable speeds.",
+      "price": 249.99,
+      "category": "Home Improvement",
+      "ratings": 4.7,
+      "creationDateTime": "2024-08-16T20:30:00"
+    },
+    {
+      "productName": "VR Headset",
+      "productImage": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQUTRRiqY3tBdlDOgvASArMISefFpAE9rPfqg&s",
+      "brandName": "Oculus",
+      "description": "Advanced VR headset with immersive experience and wireless capabilities.",
+      "price": 399.99,
+      "category": "Electronics",
+      "ratings": 4.8,
+      "creationDateTime": "2024-08-16T20:45:00"
+    }
+  ]
+  
