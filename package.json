@@ -264,6 +264,7 @@
     "supports-color": "^5.5.0",
     "supports-preserve-symlinks-flag": "^1.0.0",
     "sweetalert2": "^11.12.4",
+    "swiper": "^11.1.9",
     "text-table": "^0.2.0",
     "thenify": "^3.3.1",
     "thenify-all": "^1.6.0",
