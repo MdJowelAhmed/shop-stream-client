@@ -23,13 +23,6 @@ const Login = () => {
                 const loggedUser=result.user;
                 console.log(loggedUser)
                 const user={email}
-
-                // axios.post(`${import.meta.env.VITE_API_URL}/jwt`,user,{
-                //     withCredentials:true
-                // })
-                // .then(res=>{
-                //     console.log(res.data)
-                // })
                 if(result.user){
                     Swal.fire({
                         title: "Login successFull!",
@@ -37,7 +30,6 @@ const Login = () => {
                         icon: "success"
                       });
                     navigate(location?.state || "/")
-                    // setSuccess('register success')
                    }
             })
             .catch(error =>{

@@ -1,4 +1,4 @@
-const fakeData=[
+[
     {
       "productName": "Ultra HD Smart TV",
       "productImage": "https://res.cloudinary.com/sharp-consumer-eu/image/fetch/w_3000,f_auto/https://s3.infra.brandquad.io/accounts-media/SHRP/DAM/origin/b41a7fde-dcc1-11ec-9f1b-2e0c91dc8f24.jpg",

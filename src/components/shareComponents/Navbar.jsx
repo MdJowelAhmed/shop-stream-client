@@ -40,19 +40,17 @@ const Navbar = () => {
                                     <button > Home</button>
                                 </NavLink>
 
-                                <NavLink to='/assignments' className={({ isActive }) => isActive ? "btn btn-primary mx-3 font-semibold text-xl" : "btn btn-secondary mx-3"}>
-                                    <button > Assignments</button>
+                                <NavLink to='/products' className={({ isActive }) => isActive ? "btn btn-primary mx-3 font-semibold text-xl" : "btn btn-secondary mx-3"}>
+                                    <button > Products</button>
                                 </NavLink>
                                
                                 <div>
                                     {
                                         user ? <div>
-                                            <NavLink to='/create' className={({ isActive }) => isActive ? "btn btn-primary mx-3 font-semibold text-xl" : "btn btn-secondary mx-3"}>
-                                                <button > Create Assignments</button>
+                                            <NavLink to='/add' className={({ isActive }) => isActive ? "btn btn-primary mx-3 font-semibold text-xl" : "btn btn-secondary mx-3"}>
+                                                <button > Add Products</button>
                                             </NavLink>
-                                            <NavLink to='/pending' className={({ isActive }) => isActive ? "btn btn-primary mx-3 font-semibold text-xl" : "btn btn-secondary mx-3"}>
-                                                <button >Pending Assignments</button>
-                                            </NavLink>
+                                           
                                         </div> : <div>
                                             <Link className="btn" to='/login'>Login</Link>
                                             <Link className="btn ml-3" to='/register'>Register</Link>
@@ -70,20 +68,18 @@ const Navbar = () => {
                              <NavLink to='/' className={({ isActive }) => isActive ? "btn btn-primary mx-3 font-semibold text-xl" : "btn btn-secondary mx-3"}>
                                 <button > Home</button>
                             </NavLink>
-                            <NavLink to='/assignments' className={({ isActive }) => isActive ? "btn btn-primary mx-3 font-semibold text-xl" : "btn btn-secondary mx-3"}>
-                                <button > Assignments</button>
+                            <NavLink to='/products' className={({ isActive }) => isActive ? "btn btn-primary mx-3 font-semibold text-xl" : "btn btn-secondary mx-3"}>
+                                <button > Products</button>
                             </NavLink>
                            
 
                             <div>
                                 {
                                     user ? <div>
-                                        <NavLink to='/create' className={({ isActive }) => isActive ? "btn btn-primary mx-3 font-semibold text-xl" : "btn btn-secondary mx-3"}>
-                                            <button > Create Assignments</button>
+                                        <NavLink to='/add' className={({ isActive }) => isActive ? "btn btn-primary mx-3 font-semibold text-xl" : "btn btn-secondary mx-3"}>
+                                            <button >Add Products</button>
                                         </NavLink>
-                                        <NavLink to='/pending' className={({ isActive }) => isActive ? "btn btn-primary mx-3 font-semibold text-xl" : "btn btn-secondary mx-3"}>
-                                            <button >Pending Assignments</button>
-                                        </NavLink>
+                                      
                                     </div> : <div>
                                         <Link className="btn" to='/login'>Login</Link>
                                         <Link className="btn ml-3" to='/register'>Register</Link>
@@ -106,11 +102,6 @@ const Navbar = () => {
                                             </div>
                                         </label>
                                         <ul tabIndex={0} className="menu  dropdown-content  shadow bg-base-100 rounded-box w-40 z-[1]">
-                                            <li>
-                                                <Link to='/attempt'>
-                                                    <button className="btn btn-sm  btn-ghost">My Attempted</button></Link>
-
-                                            </li>
                                             <li>
                                                 <Link onClick={logOut}  to='/login' > <button className="btn">LogOut</button></Link>
                                             </li>
