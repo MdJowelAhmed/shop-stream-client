@@ -128,7 +128,7 @@ const Register = () => {
                         }
                         <div className="text-center ">
 
-                            <button onClick={()=>handleSocialLogin(signInWithGoogle)} className="btn btn-outline text-center mb-6 font-poppins bg-white shadow-2xl"><span className="text-4xl"><FcGoogle /></span> Login with Google</button>
+                            <button onClick={()=>handleSocialLogin(signInWithGoogle)} className="btn btn-outline text-center mb-6 font-poppins bg-white shadow-2xl"><span className="text-4xl"><FcGoogle /></span> Register with Google</button>
                         </div>
                         <div className="text-center mb-4">
                             <p>Have a Account? please <Link to='/login'><span className="text-blue-600 font-poppins">Login</span></Link></p>
